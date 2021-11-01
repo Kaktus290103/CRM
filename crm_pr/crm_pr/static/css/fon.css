@@ -1,0 +1,17 @@
+body {
+    color: white !important;
+    background: url('images/background.jpg');
+    background-size: 100%;
+    font-family: serif !important;
+}
+
+.img-logo {
+    margin-left: -100px;
+    margin-top: 15px;
+    width: 300px;
+}
+
+.slogan {
+    margin-left: 10px;
+    size: 20pt;
+}
