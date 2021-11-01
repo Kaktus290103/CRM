@@ -18,6 +18,7 @@
                     <div class="site-description">
                     <div class="row">
 							<div class="col-sm-8 slogan">
+							
 								<h2>Наши клиенты - наше будущее</h2><br>
 					        </div> 
                             
@@ -40,14 +41,13 @@
 							</div>
 							
 							<div class="collapse navbar-collapse navbar-primary-collapse">
-								<ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="#">Главная</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="#our-menu/">Клиенты</a></li>
-<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="#our-menu/">Услуги</a></li>
-<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="#our-menu/">Задачи</a></li>
-<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40"><a href="#category/events/">Преподователи</a></li>
-<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="#news/">Реклама</a></li>
-
-<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#contact-f27/">Статистика</a></li>
+								<ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="{% url 'main_page' %}">Главная</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'klients_page' %}">Клиенты</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'services_page' %}">Услуги</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'tasks_page' %}">Задачи</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40"><a href="{% url 'teachers_page' %}">Преподователи</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'ad_page' %}">Реклама</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'statistika_page' %}">Статистика</a></li>
 </ul> 
                                
 								 
