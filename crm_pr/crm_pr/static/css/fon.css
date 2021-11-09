@@ -6,9 +6,9 @@ body {
 }
 
 .img-logo {
-    margin-left: -100px;
+    margin-left: -50%;
     margin-top: 15px;
-    width: 300px;
+    width: 200%;
 }
 
 .slogan {

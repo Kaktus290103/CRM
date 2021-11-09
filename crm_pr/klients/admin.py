@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Klients, StatusKlienta, Istochnik
 
-# Register your models here.
+admin.site.register(StatusKlienta)
+admin.site.register(Istochnik)
+admin.site.register(Klients)

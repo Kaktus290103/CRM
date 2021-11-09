@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'klients',
     'tasks',
     'teachers',
-    'statistika'
+    'statistika',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [

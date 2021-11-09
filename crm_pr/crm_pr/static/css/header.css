@@ -1,8 +1,6 @@
 .header-wrapper {
     background: url('images/header_pr2.png');
     background-size: 100%;
-    width: 100%;
-    height: 215px;
 }
 
 div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons-3.widget.simple-social-icons {
@@ -15,7 +13,7 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
     }
     .navbar-right {
         float: right !important;
-        margin-right: -15px;
+        /* margin-right: -15px; */
     }
     .navbar-right~.navbar-right {
         margin-right: 0;
@@ -84,6 +82,7 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border-color: transparent;
+    /* padding-left: 100px; */
 }
 
 .navbar-default .navbar-nav>.open>a,
@@ -93,7 +92,7 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
     color: #555;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
         color: #00AAD4;
     }
