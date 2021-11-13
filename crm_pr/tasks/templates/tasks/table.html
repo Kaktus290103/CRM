@@ -1,50 +1,43 @@
-  <div class="containern">
-	<table>
-		<thead>
-			<tr>
-				<th>Column 1</th>
-				<th>Column 2</th>
-				<th>Column 3</th>
-				<th>Column 4</th>
-				<th>Column 5</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-		</tbody>
-	</table>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div class="containern">
+    {% for i in tasks %}
+    <h1> {{i.check}} </h1>
+    {% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <th>Клиент</th>
+                <th>Задача</th>
+                <th>Ответственный</th>
+                <th>Срок</th>
+                <th>Выполнено</th>
+
+            </tr>
+        </thead>
+        {% for t in tasks %}
+        <tbody>
+            <tr>
+                <td><a href="#"> {{t.klient.s_name}} </a></td>
+                <td><a href="#"> {{t.task}} </a></td>
+                <td><a href="#"> {{t.teacher.s_name}}</a></td>
+                <td><a href="#"> {{t.deadline}} </a></td>
+                <script>
+                    function senddata(elementId) {
+						console.log(document.getElementById("check").checked)
+                        axios.post( "{% url 'tasks_table' %}", {
+                                check: "document.getElementById(check).checked",
+                                task_id: "elementId"
+                        });
+					return true
+                    }
+                    
+                </script>
+                {% comment %}
+                <td><a href="#"> {{}} </a></td> {% endcomment %}
+                <td><input id="check" type="checkbox" name="check" checked="false" onchange="senddata({{t.id}})"></td>
+
+            </tr>
+        </tbody>
+        {% endfor%}
+    </table>
 </div>

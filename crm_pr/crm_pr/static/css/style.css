@@ -28,6 +28,7 @@ th {
 
 thead th {
     background-color: #55608f;
+    color: rgb(0, 217, 255);
 }
 
 tbody tr:hover {
@@ -36,6 +37,10 @@ tbody tr:hover {
 
 tbody td {
     position: relative;
+}
+
+tbody td a {
+    color: rgb(240, 255, 28);
 }
 
 tbody td:hover:before {

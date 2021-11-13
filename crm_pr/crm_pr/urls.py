@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from django.shortcuts import redirect
+from klients import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', include('main.urls')),
+    path('klients/',views.klients_table, name='klients_table'),
     path('klients/', include('klients.urls')),
     path('services/', include('services.urls')),
     path('tasks/', include('tasks.urls')),

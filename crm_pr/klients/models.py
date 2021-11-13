@@ -39,4 +39,4 @@ class Klients(models.Model):
         ordering = ('f_name',)
     
     def __str__(self):
-        return self.name
+        return self.s_name

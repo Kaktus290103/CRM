@@ -1,50 +1,24 @@
-  <div class="containern">
-	<table>
-		<thead>
-			<tr>
-				<th>Column 1</th>
-				<th>Column 2</th>
-				<th>Column 3</th>
-				<th>Column 4</th>
-				<th>Column 5</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-		</tbody>
-	</table>
+<div class="containern">
+    <table>
+        <thead>
+            <tr>
+                <th>Клиент</th>
+                <th>Услуга</th>
+                <th>Вид Услуги</th>
+                <th>Статус</th>
+                <th>Источник</th>
+            </tr>
+        </thead>
+        {% for k in allklients %}
+        <tbody>
+            <tr>
+                <td><a href="#"> {{k.s_name}} {{k.f_name}} </a></td>
+                <td><a href="#"> {{k.servise}} </a></td>
+                <td><a href="#"> {{k.servise.type}} </a></td>
+                <td><a href="#"> {{k.status}} </a></td>
+                <td><a href="#"> {{k.istochnik}} </a></td>
+            </tr>
+        </tbody>
+        {% endfor%}
+    </table>
 </div>
