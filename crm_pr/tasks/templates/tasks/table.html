@@ -1,10 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div class='button-ryad'> <button> <a href={% url 'tasks_view' %}> Добавить задачу </a> </button> </div>
+
 <div class="containern">
-    {% for i in tasks %}
-    <h1> {{i.check}} </h1>
-    {% endfor %}
     <table>
         <thead>
+
             <tr>
                 <th>Клиент</th>
                 <th>Задача</th>
@@ -23,19 +23,23 @@
                 <td><a href="#"> {{t.deadline}} </a></td>
                 <script>
                     function senddata(elementId) {
-						console.log(document.getElementById("check").checked)
-                        axios.post( "{% url 'tasks_table' %}", {
-                                check: "document.getElementById(check).checked",
-                                task_id: "elementId"
+                        console.log(document.getElementById("check").checked);
+                        var formData = new FormData();
+                        formData.append("check", document.getElementById("check").checked);
+                        formData.append("task_id", elementId);
+                        axios.post("{% url 'tasks_table' %}", formData).then((response) => {
+                            console.log(response);
                         });
-					return true
+                        return true;
                     }
-                    
                 </script>
-                {% comment %}
+                {% comment %} 
                 <td><a href="#"> {{}} </a></td> {% endcomment %}
-                <td><input id="check" type="checkbox" name="check" checked="false" onchange="senddata({{t.id}})"></td>
-
+                {% if t.check == False %}
+                <td><input id="check" type="checkbox" name="check" onchange="senddata({{t.id}})"></td>
+                {% else %}
+                <td><input id="check" type="checkbox" name="check" checked onchange="senddata({{t.id}})"></td>
+                {% endif %}
             </tr>
         </tbody>
         {% endfor%}

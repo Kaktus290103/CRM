@@ -1,0 +1,18 @@
+<div class="containern">
+    <table>
+        <thead>
+            <tr>
+                <th>Получатель</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        {% for a in ad %}
+        <tbody>
+            <tr>
+                <td><a href="#"> {{a.get}} </a></td>
+                <td><a href="#"> {{a.email}} </a></td>
+            </tr>
+        </tbody>
+        {% endfor%}
+    </table>
+</div>

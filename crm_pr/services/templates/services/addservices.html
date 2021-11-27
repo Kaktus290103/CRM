@@ -1,0 +1,42 @@
+<div class='button-ryad'> <button onclick='example()'> Добавить услугу </button> </div>
+<div class='button-ryad'> <button onclick='texample()'> Добавить преподователя </button> </div>
+<div>
+<div id="example" >
+    <div class='k-scroll'>
+        <h3>Добавление услуги<h3>
+        <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+           <button type="submit" class="save btn btn-default"> Save </button>
+        </form>
+        <button class="btn btn-default" onClick="window.location.reload()" > Close </button>
+      </div>
+      <script>
+         function example() {
+             {% comment %} document.location.href = "{% url 'services_forms' %}"; {% endcomment %}
+             el = document.getElementById("example");
+             el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+         }
+         
+         </script>  
+</div>
+<div id="texample" >
+    <div class='k-scroll'>
+        <h3>Добавление преподователя<h3>
+        <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ tform.as_p }}
+           <button type="submit" class="save btn btn-default"> Save </button>
+        </form>
+        <button class="btn btn-default" onClick="window.location.reload()" > Close </button>
+      </div>
+      <script>
+         function texample() {
+             {% comment %} document.location.href = "{% url 'services_forms' %}"; {% endcomment %}
+             el = document.getElementById("texample");
+             el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+         }
+         
+         </script>  
+</div>
+</div>

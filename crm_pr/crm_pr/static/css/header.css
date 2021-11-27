@@ -1,5 +1,5 @@
 .header-wrapper {
-    background: url('images/header_pr2.png');
+    background: url('images/footer.jpg');
     background-size: 100%;
 }
 
@@ -7,13 +7,14 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
     margin-top: 5px;
 }
 
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
     .navbar-left {
         float: left !important;
     }
     .navbar-right {
         float: right !important;
-        /* margin-right: -15px; */
+        margin-right: -15px; 
     }
     .navbar-right~.navbar-right {
         margin-right: 0;
@@ -25,7 +26,7 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
         background-image: linear-gradient(to bottom, #00AAD4 0px, #00AAD4 100%);
         background-repeat: repeat-x;
     }
-}
+} */
 
 .navbar-default {
     background-color: transparent;
@@ -143,7 +144,7 @@ div.site-description div.row div.col-sm-4 div.pull-right div#simple-social-icons
 }
 
 .navbar-brand,
-.navbar-nav>li>a {
+.navbar-nav1>li>a {
     text-shadow: 0 0px 0 rgba(255, 255, 255, 0.25);
 }
 

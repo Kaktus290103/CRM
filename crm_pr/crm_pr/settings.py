@@ -37,14 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ad',
+    'ad.apps.AdConfig',
     'main',
     'services',
     'klients',
     'tasks',
     'teachers',
     'statistika',
-    'phonenumber_field'
+    'user',
+    'phonenumber_field',
+    'googlecharts',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,16 @@ STATICFILES_DIRS = [BASE_DIR / "crm_pr" / "static"]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+RECIPIENTS_EMAIL = ['alexk290103@gmail.com']   # замените на свою почту
+DEFAULT_FROM_EMAIL = 'kaktus290103@gmail.com'  # замените на свою почту
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kaktus290103@gmail.com'
+EMAIL_HOST_PASSWORD = '123231561Pnksntdd'
+DEFAULT_FROM_EMAIL = 'Your name'
+DEFAULT_TO_EMAIL = 'Your email'
+
+LOGOUT_REDIRECT_URL = '../../home'

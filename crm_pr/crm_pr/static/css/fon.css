@@ -16,3 +16,13 @@ body {
     size: 20pt;
     font-style: italic;
 }
+
+.formtext {
+    height: 300px;
+    width: 450px;
+}
+
+.formcolor {
+    background-color: white;
+    color: black !important;
+}

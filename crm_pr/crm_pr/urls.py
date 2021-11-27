@@ -18,16 +18,19 @@ from django.urls import path
 from django.conf.urls import include
 from django.shortcuts import redirect
 from klients import views
+from user.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("logout/",LogoutView.as_view(), name="logout_view"),
     path('main/', include('main.urls')),
-    path('klients/',views.klients_table, name='klients_table'),
     path('klients/', include('klients.urls')),
     path('services/', include('services.urls')),
     path('tasks/', include('tasks.urls')),
     path('teachers/', include('teachers.urls')),
     path('ad/', include('ad.urls')),
+    path('user/', include('user.urls')),
     path('statistika/', include('statistika.urls')),
     path("", lambda request: redirect("/main/")),
+
 ]

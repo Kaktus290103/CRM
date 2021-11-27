@@ -31,7 +31,7 @@ class ServiceModel(models.Model):
     max_count = models.IntegerField(null=True, verbose_name='Максимальное количество клиентов в группе')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена', blank=True)
     sale_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Льготная цена', blank=True)
-    schedule = models.ForeignKey(Schedule, related_name='products', on_delete=models.CASCADE, null=True, verbose_name='Расписание', blank=True)
+    # schedule = models.ForeignKey(Schedule, related_name='products', on_delete=models.CASCADE, null=True, verbose_name='Расписание', blank=True)
     
     #добавить расписание
     class Meta:

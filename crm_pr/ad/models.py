@@ -1,11 +1,13 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+class Text(models.Model):
+    thema = models.TextField(max_length=20, verbose_name='Тема', null=True)
+    text = models.TextField(max_length=300, verbose_name='Текст отправки', null=True)
+
 class Ad(models.Model):
-    school = models.TextField(max_length=100, verbose_name='Школа')
-    tag_ad = models.TextField(max_length=100, verbose_name='Вид рекламы')
-    count_klients = models.IntegerField(null=True, verbose_name='Количество клиентов')
+    get = models.TextField(max_length=100, verbose_name='Получатель', null=True)
     email = models.EmailField(null=True, verbose_name='Email')
-    telephone = PhoneNumberField(verbose_name='Телефон') 
+
 
 
     class Meta:
@@ -13,4 +15,4 @@ class Ad(models.Model):
         verbose_name_plural = ("Реклама")
 
     def __str__(self):
-        return self.name
+        return self.get

@@ -18,8 +18,12 @@
                     <div class="site-description">
                     <div class="row">
 							<div class="col-sm-8 slogan">
-							
-								<h2>Наши клиенты - наше будущее</h2><br>
+								<h2>Наши клиенты - наше будущее</h2>
+								{% if user.is_authenticated %}
+								<h2 class=''><a href="{% url 'logout_view' %}">Выход</a></h2>
+                                {% else %}
+								<h2 class=''><a href="{% url 'user_view' %}">Вход в систему</a></h2>
+								{% endif %}
 					        </div> 
                             
                     </div>
@@ -41,13 +45,13 @@
 							</div>
 							
 							<div class="collapse navbar-collapse navbar-primary-collapse">
-								<ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="{% url 'main_page' %}">Главная</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'klients_page' %}">Клиенты</a></li>
+								<ul id="menu-main-menu" class="nav navbar-nav1"><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="{% url 'main_page' %}">Главная</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'klients_table' %}">Клиенты</a></li>
 <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'services_page' %}">Услуги</a></li>
-{% comment %} <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'tasks_page' %}">Задачи</a></li> {% endcomment %}
-<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40"><a href="{% url 'teachers_page' %}">Преподователи</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'tasks_table' %}">Задачи</a></li>
+{% comment %} <li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40"><a href="{% url 'teachers_page' %}">Преподователи</a></li> {% endcomment %}
 <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'ad_page' %}">Реклама</a></li>
-<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'statistika_page' %}">Статистика</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'table' %}">Статистика</a></li>
 </ul> 
                                
 								 

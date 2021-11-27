@@ -1,6 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
 {% block tasks %}
 <h1> Задачи </h1>
+{% comment %} {% include 'tasks/addtask.html' %} {% endcomment %}
 {% include 'tasks/table.html' %}
 {% endblock tasks %}

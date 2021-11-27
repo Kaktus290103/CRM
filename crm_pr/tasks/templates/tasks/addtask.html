@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block tasks %}
+<div >
+<div id="Npexample" >
+    <div class='k-scroll'>
+        <h3>Добавление новой задачи<h3>
+        <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+           <button type="submit" class="save btn btn-default"> Save </button>
+        </form>
+        <button class="btn btn-default" > <a href='{% url "tasks_table" %}'> Close </a> </button>
+      </div>
+</div>
+</div>
+{% endblock tasks %}

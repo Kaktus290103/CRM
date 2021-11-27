@@ -12,3 +12,4 @@ class Teachers(models.Model):
         s = self.f_name + ' ' + self.s_name
         return s
 
+ 

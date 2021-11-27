@@ -40,3 +40,4 @@ class Klients(models.Model):
     
     def __str__(self):
         return self.s_name
+        

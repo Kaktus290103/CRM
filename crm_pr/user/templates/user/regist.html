@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block user %}
+<h1> Регистрация </h1>
+<div class='formcolor'>
+<form action="" method="post" class='formcolor'>
+    {% csrf_token %}
+    {{ form.as_p }}
+<button type="submit">Зарегистрироваться</button>
+</div> 
+{% endblock user %}
